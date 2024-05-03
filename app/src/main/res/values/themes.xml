@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.Musica" parent="Base.Theme.Musica" />
+    <style name="splash_screen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 </resources>

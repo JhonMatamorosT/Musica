@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Musica</string>
+    <!-- botones superiores-->
+    <string name="aleatorio_btn">Aleatorio</string>
+    <string name="favoritos_btn">Favoritos</string>
+    <string name="playlist_btn">Lista de Reproduccion</string>
+    <string name="pistas_btn">Pistas</string>
+    <string name="albumes_btn">Álbumes</string>
+    <string name="artistas_btn">Artistas</string>
+    <string name="carpetas_btn">Carpetas</string>
+    <string name="año_btn">Año</string>
+
+    <!-- otros-->
+    <string name="total_songs">Todas las Canciones</string>
+
 </resources>

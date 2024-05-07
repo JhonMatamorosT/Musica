@@ -12,5 +12,6 @@
 
     <!-- otros-->
     <string name="total_songs">Todas las Canciones</string>
+    <string name="reproduciendo_musica">Reproduciendo musica</string>
 
 </resources>

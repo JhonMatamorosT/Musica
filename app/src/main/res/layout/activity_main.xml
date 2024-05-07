@@ -45,14 +45,14 @@
                     android:textAllCaps="false"/>
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:contentDescription="@string/playlist_btn"
-                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:text="@string/playlist_btn"
-                    android:textColor="@color/black"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
 
                 <Button
                     android:layout_width="wrap_content"

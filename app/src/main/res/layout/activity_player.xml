@@ -12,7 +12,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -30,7 +32,8 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
         android:text="@string/nombre_cancion"
         android:textSize="18sp"
         android:textColor="@color/black"
-        android:textAlignment="center"/>
+        android:layout_weight="1"
+        android:gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -66,32 +70,38 @@
         android:text="@string/nombre_artista"
         android:textSize="15sp"
         android:textColor="@color/black"
-        android:textAlignment="center"/>
+        android:gravity="center"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:orientation="horizontal"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:text="@string/stat_tv"/>
+            android:text="@string/stat_tv"
+            android:gravity="center"/>
 
         <androidx.appcompat.widget.AppCompatSeekBar
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:text="@string/end_tv"/>
+            android:text="@string/end_tv"
+            android:gravity="center"/>
 
     </LinearLayout>
 
@@ -100,7 +110,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/shufle_btn"
+            android:src="@drawable/aleatorio_icon"
+            app:tint="@color/gris" />
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:layout_width="wrap_content"
@@ -123,6 +143,15 @@
             app:icon="@drawable/siguiente_icon"
             app:iconSize="30dp"
             app:iconTint="@color/white"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repetir_icon"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="20dp"
+            app:tint="@color/gris"
+            android:contentDescription="@string/repetir_btn"/>
 
     </LinearLayout>
 

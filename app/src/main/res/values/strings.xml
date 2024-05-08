@@ -14,11 +14,13 @@
     <string name="total_songs">Todas las Canciones</string>
     <string name="reproduciendo_musica">Reproduciendo musica</string>
     <string name="back_btn">Back</string>
+    <string name="shufle_btn">Aleatorio</string>
+    <string name="repetir_btn">Repetir</string>
 
     <!-- player activity-->
     <string name="nombre_cancion">Nombre de la Cancion</string>
     <string name="nombre_artista">Nombre del Artista</string>
     <string name="stat_tv">00:00</string>
-    <string name="end_tv">Loading...</string>
+    <string name="end_tv">Loading…</string>
 
 </resources>

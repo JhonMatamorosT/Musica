@@ -7,6 +7,7 @@ android {
     namespace = "com.undiremos.musica"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.undiremos.musica"
         minSdk = 24
@@ -33,6 +34,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -45,4 +51,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Musica</string>
+    <string name="app_name">Música</string>
     <!-- botones superiores-->
     <string name="aleatorio_btn">Aleatorio</string>
     <string name="favoritos_btn">Favoritos</string>
@@ -22,5 +22,9 @@
     <string name="nombre_artista">Nombre del Artista</string>
     <string name="stat_tv">00:00</string>
     <string name="end_tv">Loading…</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
 
 </resources>

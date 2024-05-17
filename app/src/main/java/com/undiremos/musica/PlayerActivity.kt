@@ -14,7 +14,7 @@ class PlayerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setTheme(R.style.Theme_Musica)
+        setTheme(R.style.splash_screen)
         binding = ActivityPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

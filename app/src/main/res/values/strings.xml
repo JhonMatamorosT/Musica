@@ -26,5 +26,13 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <!-- nav-->
+    <string name="app_icon">Icon</string>
+    <string name="text_nav">Bienvenidos a\nMusica</string>
+    <string name="feedback">Comentario</string>
+    <string name="settings">Configuración</string>
+    <string name="about">Nosotros</string>
+    <string name="exit">Salir</string>
+
 
 </resources>

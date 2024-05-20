@@ -12,6 +12,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.undiremos.musica.databinding.ActivityMainBinding
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -67,6 +68,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.navView.setNavigationItemSelectedListener{
+            when(it.itemId)
+            {
+                R.id.navFeedback -> Toast.makeText(baseContext, "Feedback", Toast.LENGTH_SHORT).show()
+                R.id.navSettings -> Toast.makeText(baseContext, "Setting", Toast.LENGTH_SHORT).show()
+                R.id.navAbout -> Toast.makeText(baseContext, "About", Toast.LENGTH_SHORT).show()
+                R.id.navExit -> exitProcess(1)
+            }
+            true
+        }
+
+        //por defecto
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

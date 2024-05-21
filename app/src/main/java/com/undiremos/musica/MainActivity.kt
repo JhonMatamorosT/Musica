@@ -1,5 +1,6 @@
 package com.undiremos.musica
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.undiremos.musica.databinding.ActivityMainBinding
 import kotlin.system.exitProcess
 
@@ -19,20 +21,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toogle: ActionBarDrawerToggle
+    private lateinit var musicAdapter: MusicAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestRuntimePermission()
-        enableEdgeToEdge()
-        setTheme(R.style.Theme_Musica)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        //for nav drawer
-        toogle = ActionBarDrawerToggle(this, binding.root,R.string.open, R.string.close)
-        binding.root.addDrawerListener(toogle)
-        toogle.syncState()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        initializeLayout()
 
         //acciones de botones
         binding.aleatorioBtn.setOnClickListener {
@@ -108,5 +101,32 @@ class MainActivity : AppCompatActivity() {
         if (toogle.onOptionsItemSelected(item))
             return true
         return super.onOptionsItemSelected(item)
+    }
+    @SuppressLint("SetTextI18n")
+    private fun initializeLayout(){
+        requestRuntimePermission()
+        enableEdgeToEdge()
+        setTheme(R.style.Theme_Musica)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //for nav drawer
+        toogle = ActionBarDrawerToggle(this, binding.root,R.string.open, R.string.close)
+        binding.root.addDrawerListener(toogle)
+        toogle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val musicList = ArrayList<String>()
+        musicList.add("1 song")
+        musicList.add("2 song")
+        musicList.add("3 song")
+        musicList.add("4 song")
+        musicList.add("5 song")
+        binding.musicRV.setHasFixedSize(true)
+        binding.musicRV.setItemViewCacheSize(13)
+        binding.musicRV.layoutManager = LinearLayoutManager(this@MainActivity)
+        musicAdapter = MusicAdapter(this@MainActivity, musicList)
+        binding.musicRV.adapter = musicAdapter
+        binding.totalsongs.text = "Total Songs : "+musicAdapter.itemCount
     }
 }

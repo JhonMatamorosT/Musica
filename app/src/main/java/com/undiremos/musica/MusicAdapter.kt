@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.undiremos.musica.databinding.MusicViewBinding
 
-class MusicAdapter (private val context: Context, private val musicList: ArrayList<String>): RecyclerView.Adapter<MusicAdapter.MyHolder>() {
+class MusicAdapter (private val context: Context, private val musicList: ArrayList<Music>): RecyclerView.Adapter<MusicAdapter.MyHolder>() {
 
     class MyHolder(binding: MusicViewBinding) : RecyclerView.ViewHolder(binding.root){
         val title = binding.songnameMV
@@ -20,7 +20,9 @@ class MusicAdapter (private val context: Context, private val musicList: ArrayLi
     }
 
     override fun onBindViewHolder(holder: MusicAdapter.MyHolder, position: Int) {
-        holder.title.text = musicList[position]
+        holder.title.text = musicList[position].title
+        holder.artists.text = musicList[position].artist
+        holder.duration.text = musicList[position].duration.toString()
     }
 
     override fun getItemCount(): Int {
